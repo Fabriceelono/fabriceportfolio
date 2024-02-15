@@ -9,7 +9,7 @@
 header {
   background-color: #024b84;
   color: #fff;
-  padding: 30px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -32,7 +32,6 @@ nav a {
   text-decoration: none;
   font-size: 20px;
   padding: 0 10px;
-  padding-top: 10px;
 }
 nav a:hover {
   color: #b4b4b8;
@@ -62,9 +61,14 @@ body {
 .carousel-caption h5,
 .carousel-caption p {
   color: white;
-  font-size: 40px;
+  font-size: 50px;
 }
 .carousel-item img {
-  height: 832px;
+  height: 883px;
   object-fit: cover;
+}
+
+.blue-text {
+  color: #0e69ae;
+  text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
 }
