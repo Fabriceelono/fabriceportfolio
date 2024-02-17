@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 /* General configurations */
 * {
@@ -70,5 +71,145 @@ body {
 
 .blue-text {
   color: #0e69ae;
-  text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.blue-text-subject {
+  text-shadow: none;
+  color: #0e69ae;
+}
+
+/* about me section  */
+#aboutme {
+  display: flex;
+  box-sizing: border-box;
+  margin: 100px;
+  padding-top: 120px;
+}
+.aboutme-image {
+}
+.aboutme-image img {
+  width: 430px;
+}
+.aboutmetext {
+  text-align: center;
+  padding-top: 60px;
+  width: 100%;
+  line-height: 1.8;
+}
+.aboutmetext h2 {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Buttons */
+.buttonprofile {
+  background-color: #0e69ae;
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 35px;
+  border: none;
+  transition: all 200ms;
+}
+
+.buttonprofile:hover {
+  background-color: #c7c8cc;
+  cursor: pointer;
+  color: black;
+}
+#contactbutton {
+  background-color: white;
+  border: 2px solid #024b84;
+  color: #024b84;
+  box-shadow: none;
+}
+#contactbutton:hover {
+  background-color: gray;
+  color: white;
+  border: none;
+}
+
+/* Projects */
+.projects {
+  margin-top: 50px;
+  padding-top: 80px;
+}
+.projects #title {
+  text-align: center;
+}
+.project1 {
+  margin-top: 100px;
+}
+.project1 h3,
+.project2 h3 {
+  text-align: center;
+}
+.project2 {
+  padding-top: 70px;
+}
+
+.project-content {
+  display: flex;
+}
+.project-content img {
+  width: 50%;
+  box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  border-radius: 20px;
+  object-fit: contain;
+}
+.project-text-content {
+  margin: 60px;
+  padding: 15px 5px 0px 5px;
+  background-color: #c7c8cc;
+  border: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.5);
+}
+.project-text-content p {
+  text-align: left;
+}
+
+/* more projects  */
+article {
+  margin: 20px;
+  margin-top: 160px;
+}
+article h2,
+p {
+  text-align: center;
+}
+.card-body {
+  background-color: #024b84;
+}
+.card-title {
+  color: #fff;
+  font-size: 26px;
+}
+.card-text {
+  color: #fff;
+  text-align: left;
+}
+
+/* contact */
+.contact {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.contact h1,
+p {
+  text-align: center;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+}
+.social i {
+  font-size: 40px;
+  color: #024b84;
+}
+.social i:hover {
+  color: #b4b4b8;
 }
