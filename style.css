@@ -216,11 +216,21 @@ p {
 .social i {
   font-size: 40px;
   color: #024b84;
+  transition: transform 0.3s ease;
 }
 .social i:hover {
   color: #b4b4b8;
+  transform: translateY(-15px);
 }
 
+@media (max-width: 414px) {
+  #aboutme img {
+    width: 100%;
+  }
+  #contactbutton {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 576px) {
   header {
     display: block;
