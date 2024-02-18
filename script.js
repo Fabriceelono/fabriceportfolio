@@ -13,3 +13,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const hiddenTop = document.querySelectorAll(".hidden-top");
 hiddenTop.forEach((el) => observer.observe(el));
+
+const hiddenright = document.querySelectorAll(".hidden-right");
+hiddenright.forEach((el) => observer.observe(el));
