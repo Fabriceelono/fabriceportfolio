@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-portfolio Fabrice Elono Piseth</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon_io/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Fabrice Elono</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#esn">ESN</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Fabrice Elono</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/fabriceprofile.jpg" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Fabrice Elono</h1>
+        <p class="section__text__p2">
+          Aspiring Web developper and Data Analyst
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/CV_Fabrice.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <a href="https://www.linkedin.com/in/fabriceelono/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/Fabriceelono"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/fabrice.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <i class="fa-solid fa-trophy"></i>
+              <h3>Experience</h3>
+              <p>2+ years <br />Applied Computer Science</p>
+            </div>
+            <div class="details-container">
+              <i class="fa-solid fa-school"></i>
+              <h3>Education</h3>
+              <p>Bachelor Degree at Thomas More <br />Geel , Belgium</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I'm a 23-year-old Applied Computer Science student in my second
+              year, with a passion for technology and innovation. Despite not
+              having a background in computer science during high school, I
+              chose this path because I was drawn to the digital world. I love
+              to travel and learn new skills, including languages like Dutch and
+              Turkish, alongside French and English. My goal is to explore more
+              of the world and share my knowledge with young African IT
+              students, inspiring them with the insights I've gained while
+              studying in Belgium.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>MariaDB</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details-container">
+        <h2 class="experience-sub-title">Programming Language</h2>
+        <div class="article-container">
+          <article>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <h3>Python</h3>
+              <p>Experienced</p>
+            </div>
+          </article>
+          <article>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <h3>Java</h3>
+              <p>Experienced</p>
+            </div>
+          </article>
+          <article>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <h3>.Net</h3>
+              <p>Intermediate</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/ra.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Mindful Memory - Requirement Analysis
+            </h2>
+            <p class="project-description">
+              We had an intense one week project for the course Requirement
+              Analysis. We were in charge to create a data model to help people
+              with memory problems. In this project, my skills on data modeling
+              increased.
+            </p>
+            <p>February , 2024</p>
+            <h3>Objectives</h3>
+            <ul class="project-objectives">
+              <li>Creating a data model</li>
+              <li>Building the prototypes</li>
+              <li>Finalizing the reports</li>
+              <li>Presenting to our client</li>
+            </ul>
+            <h3>Team Members</h3>
+            <ul class="project-team-members">
+              <li>Fabrice Elono</li>
+              <li>Francesco Chrabieh</li>
+              <li>Dominykas Railla</li>
+              <li>Paula Colmenero</li>
+              <li>Mark Vaykul</li>
+              <li>Branko Van Tendeloo</li>
+            </ul>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/youthcompass.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Youth Compass - Webdesign Advanced
+            </h2>
+            <p class="project-description">
+              Youth-compass was one of the projects I enjoyed the most during my
+              first year, the aim was to build a website for a youth center. The
+              project was fun, and I had an amazing team.
+            </p>
+            <p>May 2023</p>
+            <h3>Objectives</h3>
+            <ul class="project-objectives">
+              <li>Building a website using Sass, npm, gulp</li>
+              <li>Learn how to use git requests</li>
+            </ul>
+            <h3>Team Members</h3>
+            <ul class="project-team-members">
+              <li>Fabrice Elono</li>
+              <li>Aynur Guliyeva</li>
+              <li>Egemen Alkan</li>
+            </ul>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://1acs-2023-team-7.netlify.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/mario.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Mario Jumping Game - Kreativestorm
+            </h2>
+            <p class="project-description">
+              I had a training program with company Kreativestorm, and one of
+              our final projects was to build a Jumping Game.
+            </p>
+            <p>February,2024</p>
+            <h3>Objectives</h3>
+            <ul class="project-objectives">
+              <li>
+                Learning more on JavaScript and how to reproduce the cactus game
+              </li>
+            </ul>
+            <h3>Team Members</h3>
+            <ul class="project-team-members">
+              <li>Fabrice</li>
+              <li>Kumang</li>
+              <li>Peter</li>
+              <li>Shaked</li>
+              <li>David</li>
+            </ul>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://fabriceelono.github.io/DinosaurGame/pages/game.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/iot.jpeg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Mouse Trap - IOT</h2>
+            <p class="project-description">
+              The IOT Mouse Trap project showcases an innovative use of the
+              Orange Pi, integrating various components such as motors, sensors,
+              and buttons to develop a humane and efficient mouse trap. This
+              project represents a convergence of mechanical engineering and
+              information technology, aiming to provide a modern solution to a
+              common household challenge. It demonstrates the practical
+              application of IOT devices in creating smart, responsive systems
+              that interact with the environment in real-time.
+            </p>
+            <p>May , 2023</p>
+            <h3>Objectives</h3>
+            <ul class="project-objectives">
+              <li>Design and construct a humane mouse trap using Orange Pi</li>
+              <li>Incorporate sensors to detect the presence of a mouse</li>
+              <li>Implement motor controls for trap mechanisms</li>
+              <li>
+                Develop user interface elements with buttons for manual control
+              </li>
+              <li>Ensure the device's real-time response and reliability</li>
+            </ul>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.youtube.com/watch?v=bGYL765k-KE/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/mind.webp"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Mindful Memory - Task Reminder Web App
+            </h2>
+            <p class="project-description">
+              Mindful Memory is a web app crafted to support those with memory
+              impairments, offering a simple interface for managing daily tasks.
+              Utilizing Laravel and Livewire, it provides an effortless and
+              interactive user experience, while Tailwind CSS delivers a clean
+              and responsive design. Our goal is to improve daily living for
+              users, giving them a dependable assistant in their pursuit of
+              autonomy and a better quality of life.
+            </p>
+            <p>May 2024</p>
+            <h3>Objectives</h3>
+            <ul class="project-objectives">
+              <li>
+                Develop a reliable task reminder system for memory-impaired
+                users
+              </li>
+              <li>
+                Utilize Laravel Livewire for a dynamic, single-page application
+                feel
+              </li>
+              <li>Implement a clean, responsive UI with Tailwind CSS</li>
+              <li>
+                Ensure user-friendly experience with intuitive navigation and
+                design
+              </li>
+            </ul>
+            <h3>Team Members</h3>
+            <ul class="project-team-members">
+              <li>Fabrice Elono</li>
+              <li>Francesco Chrabieh</li>
+              <li>Adrian Belmans</li>
+              <li>Ayana Torgoeva</li>
+              <li>Mark Vaykul</li>
+              <li>Dominykas Railla</li>
+            </ul>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo Soon
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="esn">
+      <p class="section__text__p1">Engaging with the Community</p>
+      <h1 class="title">Erasmus Student Network</h1>
+      <div class="section-content">
+        <img src="./assets/esn.jpg" alt="ESN Logo" class="esn-logo" />
+        <p class="evolution-description">
+          As an active member of the Erasmus Student Network, I am deeply
+          involved in fostering student mobility in Higher Education. My
+          contributions to ESN include organizing cultural events, providing
+          support and guidance to international students, and advocating for
+          student exchange programs. Joining ESN has been a rewarding journey
+          that has allowed me to grow my network and enrich my educational
+          experience. I could improve my public speaking skills , become more
+          social .
+        </p>
+        <!-- Additional content like images, bullet points, etc. -->
+      </div>
+      <div class="esn-evolution">
+        <h2 class="subtitle">My Evolution in ESN Geel</h2>
+        <img src="./assets//esn2023.jpg" alt="ESN2023" class="esn-logo" />
+        <p class="evolution-description">
+          My journey with the Erasmus Student Network has been a tale of
+          continuous growth and engagement. Starting as an
+          <strong>Event Manager in 2022-2023</strong>, I spearheaded the
+          planning and execution of memorable cultural and social events,
+          enhancing the Erasmus experience for students. Advancing into the role
+          of <strong>Buddy Coordinator in 2023-2024</strong>, I took on the
+          responsibility of matching local buddies with international students,
+          fostering friendships and ensuring a warm welcome to all participants
+          in the program. These roles have not only contributed to the vibrancy
+          of our ESN chapter but have also been instrumental in my personal and
+          professional development.
+        </p>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <i class="fa-solid fa-envelope"></i>
+          <p>
+            <a href="mailto:examplemail@gmail.com">elonopiseth@gmail.com</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <p>
+            <a href="https://www.linkedin.com/in/fabriceelono/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &#169; 2024 Fabrice Elono. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
