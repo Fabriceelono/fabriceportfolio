@@ -254,12 +254,12 @@ section {
   }
 }
 
-/* Floating base class */
 .floating-image {
   animation: float 4s ease-in-out infinite;
-  transition: transform 0.3s ease;
-  will-change: transform;
-  transform-style: preserve-3d;
+}
+/* Hover tilt effect */
+.floating-image:hover {
+  transform: translateY(-10px) rotateY(8deg) rotateX(4deg);
 }
 
 #profile {

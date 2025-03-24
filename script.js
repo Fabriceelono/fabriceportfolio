@@ -53,7 +53,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  const profileImage = document.querySelector(".section__pic-container");
+  const profileImage = document.querySelector(".section__pic-container img");
   if (profileImage) {
     profileImage.classList.add("floating-image");
   }
