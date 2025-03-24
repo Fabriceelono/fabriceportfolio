@@ -10,6 +10,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-
 awesome/6.2.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link
@@ -28,6 +34,8 @@ awesome/6.2.0/css/all.min.css"
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#esn">ESN</a></li>
+          <li><a href="#internship">Internship</a></li>
+          <li><a href="achievements">Achievements</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -50,14 +58,15 @@ awesome/6.2.0/css/all.min.css"
       </div>
     </nav>
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/fabriceprofile.png" alt="John Doe profile picture" />
-      </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Fabrice Elono</h1>
+        <p class="section__text__p1">
+          <span id="typed-text"></span><span class="cursor" id="cursor-1">|</span>
+        </p>
+        <h1 class="title">
+          <span id="typed-name"></span><span class="cursor" id="cursor-2">|</span>
+        </h1>
         <p class="section__text__p2">
-          Aspiring Web developper and Data Analyst
+          Aspiring Data Professional and Data Analyst
         </p>
         <div class="btn-container">
           <button
@@ -79,6 +88,12 @@ awesome/6.2.0/css/all.min.css"
           ></a>
         </div>
       </div>
+      window.addEventListener("DOMContentLoaded", () => {
+        const profileImage = document.querySelector(".section__pic-container");
+        if (profileImage) {
+          profileImage.classList.add("floating-image");
+        }
+      });
     </section>
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
@@ -96,7 +111,7 @@ awesome/6.2.0/css/all.min.css"
             <div class="details-container">
               <i class="fa-solid fa-trophy"></i>
               <h3>Experience</h3>
-              <p>2+ years <br />Applied Computer Science</p>
+              <p>3+ years <br />Applied Computer Science</p>
             </div>
             <div class="details-container">
               <i class="fa-solid fa-school"></i>
@@ -106,15 +121,7 @@ awesome/6.2.0/css/all.min.css"
           </div>
           <div class="text-container">
             <p>
-              I'm a 23-year-old Applied Computer Science student in my second
-              year, with a passion for technology and innovation. Despite not
-              having a background in computer science during high school, I
-              chose this path because I was drawn to the digital world. I love
-              to travel and learn new skills, including languages like Dutch and
-              Turkish, alongside French and English. My goal is to explore more
-              of the world and share my knowledge with young African IT
-              students, inspiring them with the insights I've gained while
-              studying in Belgium.
+              I’m a 24-year-old Applied Computer Science student with a strong passion for data-driven problem solving and intelligent systems. I thrive on hard work, constantly seeking growth through new challenges—whether it's building smarter solutions or exploring creative outlets like content creation. I’m deeply motivated by the power of data and technology to create meaningful impact, and I’m always eager to learn, improve, and push boundaries.
             </p>
           </div>
         </div>
@@ -129,320 +136,981 @@ awesome/6.2.0/css/all.min.css"
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
+    
       <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>MariaDB</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <i class="fa-solid fa-circle-check"></i>
-                <div>
-                  <h3>MongoDB</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+    
+        <!-- Frontend -->
+        <div class="experience-category">
+          <h3 class="experience-title"><i class="fas fa-code"></i> Frontend Development</h3>
+          <div class="skill-badges">
+            <span class="skill-badge frontend-badge"><i class="fab fa-html5"></i> HTML – Experienced</span>
+            <span class="skill-badge frontend-badge"><i class="fab fa-css3-alt"></i> CSS – Experienced</span>
+            <span class="skill-badge frontend-badge"><i class="fab fa-sass"></i> SASS – Intermediate</span>
+            <span class="skill-badge frontend-badge"><i class="fab fa-js-square"></i> JavaScript – Basic</span>
+            <span class="skill-badge frontend-badge"><i class="fab fa-php"></i> PHP – Intermediate</span>
+            <span class="skill-badge frontend-badge"><i class="fas fa-stream"></i> Laravel – Intermediate</span>
           </div>
         </div>
-      </div>
-      <div class="details-container">
-        <h2 class="experience-sub-title">Programming Language</h2>
-        <div class="article-container">
-          <article>
-            <i class="fa-solid fa-circle-check"></i>
-            <div>
-              <h3>Python</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <i class="fa-solid fa-circle-check"></i>
-            <div>
-              <h3>Java</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <i class="fa-solid fa-circle-check"></i>
-            <div>
-              <h3>.Net</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
+        
+    
+        <!-- Backend -->
+        <div class="experience-category">
+          <h3 class="experience-title"><i class="fas fa-server"></i> Backend & Databases</h3>
+          <div class="skill-badges">
+            <span class="skill-badge backend-badge"><i class="fab fa-node-js"></i> Node.js – Basic</span>
+            <span class="skill-badge backend-badge"><i class="fas fa-database"></i> MariaDB – Basic</span>
+            <span class="skill-badge backend-badge"><i class="fas fa-database"></i> MySQL – Intermediate</span>
+            <span class="skill-badge backend-badge"><i class="fas fa-database"></i> MongoDB – Intermediate</span>
+          </div>
         </div>
+    
+        <!-- Programming Languages -->
+        <div class="experience-category">
+          <h3 class="experience-title"><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-badges">
+            <span class="skill-badge programming-badge"><i class="fab fa-python"></i> Python – Experienced</span>
+            <span class="skill-badge programming-badge"><i class="fab fa-java"></i> Java – Experienced</span>
+            <span class="skill-badge programming-badge"><i class="fas fa-code"></i> .NET – Intermediate</span>
+          </div>
+        </div>
+    
+        <!-- AI & Machine Learning -->
+        <div class="experience-category">
+          <h3 class="experience-title"><i class="fas fa-brain"></i> AI & Machine Learning (2024)</h3>
+          <div class="skill-badges">
+            <span class="skill-badge ai-badge"><i class="fas fa-rocket"></i> FastAI – Intermediate</span>
+            <span class="skill-badge ai-badge"><i class="fas fa-eye"></i> YOLOv5 – Intermediate</span>
+            <span class="skill-badge ai-badge"><i class="fas fa-network-wired"></i> crewAI – Basic</span>
+            <span class="skill-badge ai-badge"><i class="fas fa-window-restore"></i> Streamlit – Experienced</span>
+            <span class="skill-badge ai-badge"><i class="fas fa-robot"></i> LLM APIs (OpenAI, Groq) – Intermediate</span>
+          </div>
+        </div>
+    
+        <!-- Data Analytics -->
+        <div class="experience-category">
+          <h3 class="experience-title"><i class="fas fa-chart-bar"></i> Data Analytics & BI (2024)</h3>
+          <div class="skill-badges">
+            <span class="skill-badge data-badge"><i class="fas fa-chart-pie"></i> Qlik Sense – Intermediate</span>
+            <span class="skill-badge data-badge"><i class="fas fa-chart-line"></i> Power BI – Basic</span>
+            <span class="skill-badge data-badge"><i class="fas fa-table"></i> Pandas – Intermediate</span>
+            <span class="skill-badge data-badge"><i class="fas fa-square-root-variable"></i> Numpy – Intermediate</span>
+            <span class="skill-badge data-badge"><i class="fas fa-sitemap"></i> Data Modeling – Intermediate</span>
+          </div>
+        </div>
+    
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
+    
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/ra.png" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Mindful Memory - Requirement Analysis
-            </h2>
-            <p class="project-description">
-              We had an intense one week project for the course Requirement
-              Analysis. We were in charge to create a data model to help people
-              with memory problems. In this project, my skills on data modeling
-              increased.
-            </p>
-            <p>February , 2024</p>
-            <h3>Objectives</h3>
-            <ul class="project-objectives">
-              <li>Creating a data model</li>
-              <li>Building the prototypes</li>
-              <li>Finalizing the reports</li>
-              <li>Presenting to our client</li>
-            </ul>
-            <h3>Team Members</h3>
-            <ul class="project-team-members">
-              <li>Fabrice Elono</li>
-              <li>Francesco Chrabieh</li>
-              <li>Dominykas Railla</li>
-              <li>Paula Colmenero</li>
-              <li>Mark Vaykul</li>
-              <li>Branko Van Tendeloo</li>
-            </ul>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/youthcompass.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Youth Compass - Webdesign Advanced
-            </h2>
-            <p class="project-description">
-              Youth-compass was one of the projects I enjoyed the most during my
-              first year, the aim was to build a website for a youth center. The
-              project was fun, and I had an amazing team.
-            </p>
-            <p>May 2023</p>
-            <h3>Objectives</h3>
-            <ul class="project-objectives">
-              <li>Building a website using Sass, npm, gulp</li>
-              <li>Learn how to use git requests</li>
-            </ul>
-            <h3>Team Members</h3>
-            <ul class="project-team-members">
-              <li>Fabrice Elono</li>
-              <li>Aynur Guliyeva</li>
-              <li>Egemen Alkan</li>
-            </ul>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://1acs-2023-team-7.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/mario.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Mario Jumping Game - Kreativestorm
-            </h2>
-            <p class="project-description">
-              I had a training program with company Kreativestorm, and one of
-              our final projects was to build a Jumping Game.
-            </p>
-            <p>February,2024</p>
-            <h3>Objectives</h3>
-            <ul class="project-objectives">
-              <li>
-                Learning more on JavaScript and how to reproduce the cactus game
-              </li>
-            </ul>
-            <h3>Team Members</h3>
-            <ul class="project-team-members">
-              <li>Fabrice</li>
-              <li>Kumang</li>
-              <li>Peter</li>
-              <li>Shaked</li>
-              <li>David</li>
-            </ul>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://fabriceelono.github.io/DinosaurGame/pages/game.html'"
-              >
-                Live Demo
-              </button>
+      <div class="row">
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/nlp.jpg"
+              class="card-img-top"
+              alt="NLP Challenge"
+            />
+            <div class="card-body">
+              <h5 class="card-title">NLP Challenge - Deep Learning</h5>
+              <p class="card-text">
+                A personalized learning assistant powered by LLMs, built with Streamlit and crewAI, capable of answering questions, generating summaries, and creating quizzes from course materials.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#nlp"
+                >
+                  View Details
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/iot.jpeg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Mouse Trap - IOT</h2>
-            <p class="project-description">
-              The IOT Mouse Trap project showcases an innovative use of the
-              Orange Pi, integrating various components such as motors, sensors,
-              and buttons to develop a humane and efficient mouse trap. This
-              project represents a convergence of mechanical engineering and
-              information technology, aiming to provide a modern solution to a
-              common household challenge. It demonstrates the practical
-              application of IOT devices in creating smart, responsive systems
-              that interact with the environment in real-time.
-            </p>
-            <p>May , 2023</p>
-            <h3>Objectives</h3>
-            <ul class="project-objectives">
-              <li>Design and construct a humane mouse trap using Orange Pi</li>
-              <li>Incorporate sensors to detect the presence of a mouse</li>
-              <li>Implement motor controls for trap mechanisms</li>
-              <li>
-                Develop user interface elements with buttons for manual control
-              </li>
-              <li>Ensure the device's real-time response and reliability</li>
-            </ul>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.youtube.com/watch?v=bGYL765k-KE/'"
-              >
-                Live Demo
-              </button>
+
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/noober.png"
+              class="card-img-top"
+              alt="Noober Caepool App"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Noober Caepool App - Project 4.0</h5>
+              <p class="card-text">
+                A smart carpooling app that predicts ideal ride combinations based on location, preferences, and events, while offering a smooth, mobile-friendly experience.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#noober"
+                >
+                  View Details
+                </button>
+              </div>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/mind.webp"
-                alt="Project 2"
-                class="project-img"
-              />
+        </div>
+
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/TML.jpg"
+              class="card-img-top"
+              alt="TML"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tomorrowland Analytics (Epic Data) - Business Intelligence </h5>
+              <p class="card-text">
+                A BI dashboard and web story built with Qlik Sense, uncovering insights into visitor behavior, sales, and trends at Tomorrowland using real data and visual storytelling.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#bi"
+                >
+                  View Details
+                </button>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">
-              Mindful Memory - Task Reminder Web App
-            </h2>
-            <p class="project-description">
-              Mindful Memory is a web app crafted to support those with memory
-              impairments, offering a simple interface for managing daily tasks.
-              Utilizing Laravel and Livewire, it provides an effortless and
-              interactive user experience, while Tailwind CSS delivers a clean
-              and responsive design. Our goal is to improve daily living for
-              users, giving them a dependable assistant in their pursuit of
-              autonomy and a better quality of life.
-            </p>
-            <p>May 2024</p>
-            <h3>Objectives</h3>
-            <ul class="project-objectives">
-              <li>
-                Develop a reliable task reminder system for memory-impaired
-                users
-              </li>
-              <li>
-                Utilize Laravel Livewire for a dynamic, single-page application
-                feel
-              </li>
-              <li>Implement a clean, responsive UI with Tailwind CSS</li>
-              <li>
-                Ensure user-friendly experience with intuitive navigation and
-                design
-              </li>
-            </ul>
-            <h3>Team Members</h3>
-            <ul class="project-team-members">
-              <li>Fabrice Elono</li>
-              <li>Francesco Chrabieh</li>
-              <li>Adrian Belmans</li>
-              <li>Ayana Torgoeva</li>
-              <li>Mark Vaykul</li>
-              <li>Dominykas Railla</li>
-            </ul>
-            <div class="btn-container">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/ra.png"
+              class="card-img-top"
+              alt="Mindful Memory"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mindful Memory - Requirement Analysis</h5>
+              <p class="card-text">
+                We had an intense one week project for the course Requirement
+                Analysis.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#mindfulMemoryModal"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/youthcompass.png"
+              class="card-img-top"
+              alt="Youth Compass"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Youth Compass - Webdesign Advanced</h5>
+              <p class="card-text">
+                Youth-compass was one of the projects I enjoyed the most during
+                my first year.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#youthCompassModal"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/mario.jpg"
+              class="card-img-top"
+              alt="Mario Jumping Game"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mario Jumping Game - Kreativestorm</h5>
+              <p class="card-text">
+                I had a training program with company Kreativestorm to build a
+                Jumping Game.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#marioGameModal"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/iot.jpeg"
+              class="card-img-top"
+              alt="Mouse Trap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mouse Trap - IoT Essentials</h5>
+              <p class="card-text">
+                The IoT Mouse Trap project showcases the innovative use of Orange Pi to build a humane and efficient solution for rodent control. By integrating motors, sensors, and manual control buttons, the trap detects the presence of a mouse and responds in real-time. The project blends mechanical and software engineering to create a modern smart device for everyday use.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#iot"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 project-card">
+          <div class="card">
+            <img
+              src="./assets/php.png"
+              class="card-img-top"
+              alt="Mindful Memory"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mindful Memory - Project PHP</h5>
+              <p class="card-text">
+                A task reminder app built with Laravel and Livewire, designed to assist users with memory impairments through a clean, intuitive UI.
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#php"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      <!-- Modals -->
+      <div class="modal fade" id="nlp" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">NLP Challenge - Deep Learning</h5>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
               >
-                Live Demo Soon
+                <span aria-hidden="true">&times;</span>
               </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/nlp.jpg"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="nlp"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      The NLP Challenge was a one-week deep learning project where we built a personalized learning assistant using Streamlit and the crewAI multi-agent framework. The assistant could answer questions, generate summaries, and create quizzes based on course documents using a custom RAG pipeline with vector databases and the Groq LLM API.
+                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>December, 2024</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Build a Streamlit interface with chatbot, document upload, and model selector
+                        </li>
+                        <li>
+                          Implement a custom RAG-based question answering system
+                        </li>
+                        <li>Store and retrieve data using a vector database</li>
+                        <li>Extend with agents like quiz generation or cheat sheet summarization</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice Elono</li>
+                        <li>Rae Makonga</li>
+                        <li>Safwan</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://github.com/Fabriceelono/DL_Project_2/"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="noober" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Noober Caepool App - Project 4.0</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/noober.png"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="nlp"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      Noober is a smart carpooling application designed to match colleagues for ride-sharing based on personal and logistical preferences such as location, music taste, and event attendance. The app uses predictive algorithms to suggest optimal carpool combinations and pickup points, promoting sustainability and employee well-being.                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>February, 2025</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Create profiles with address, car type, and preferences
+                        </li>
+                        <li>
+                          Predict optimal carpool combinations using custom logic
+                        </li>
+                        <li>Suggest ideal pickup points based on driving distance</li>
+                        <li>Develop a scalable backend with a REST API
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice Elono</li>
+                        <li>Arne Bogaerts</li>
+                        <li>Maxim Peeters</li>
+                        <li>Eva Burghorn</li>
+                        <li>Jef Ceulemans</li>
+                        <li>Mikolaj Jodlowski</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://youtu.be/-dfTWIm0kos?si=cqSia2JMxjan5ZxE"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bi" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Tomorrowland Analytics (Epic Data) - Business Intelligence</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/TML.jpg"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="nlp"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      Tomorrowland Analytics is a full-stack Business Intelligence project powered by Qlik Sense. Using real-world festival data, we built a dynamic dashboard for stakeholders like the mayor of Boom and the event organizers. The project focused on transforming raw data into actionable insights through a strong data model and effective storytelling with embedded analytics.                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>January, 2025</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Design and implement a clean data model using Qlik scripting
+                        </li>
+                        <li>
+                          Build a multi-sheet dashboard showing insights on sales, food, visitors, etc.
+                        </li>
+                        <li>Apply advanced data visualizations (e.g. box plot, distribution plot)</li>
+                        <li>Use set analysis and master items for consistency</li>
+                        <li>Develop a companion web app with embedded Qlik objects to narrate the story behind the data</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice Elono</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://github.com/Fabriceelono/qlik-embed-Fabrice-TML.git"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="mindfulMemoryModal"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Mindful Memory - Requirement Analysis</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/ra.png"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="Mindful Memory Project"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      In this intensive one-week Requirement Analysis project,
+                      our team was tasked with creating a comprehensive data
+                      model to support individuals with memory challenges. The
+                      project combined technical expertise with empathetic
+                      design, focusing on developing a solution that could
+                      genuinely improve users' daily lives.
+                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>February, 2024</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>Creating a comprehensive data model</li>
+                        <li>Building functional prototypes</li>
+                        <li>Developing detailed project reports</li>
+                        <li>Presenting findings to the client</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice Elono</li>
+                        <li>Francesco Chrabieh</li>
+                        <li>Dominykas Railla</li>
+                        <li>Paula Colmenero</li>
+                        <li>Mark Vaykul</li>
+                        <li>Branko Van Tendeloo</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://github.com/itfactory-tm/2024-ProjectPHP-702.git"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Project
+              </a>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="modal fade" id="youthCompassModal" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Youth Compass - Webdesign Advanced</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/youthcompass.png"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="Youth Compass Project"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      Youth Compass is a modern web development project built
+                      during our advanced web design class. The goal was to
+                      deliver a fully functional and responsive site using
+                      cutting-edge frontend tools and practices like Sass, npm,
+                      and gulp. Collaboration and version control using Git were
+                      central to the workflow.
+                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>May, 2023</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Build a responsive website using Sass, npm, gulp
+                        </li>
+                        <li>
+                          Learn and practice Git collaboration via pull requests
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice Elono</li>
+                        <li>Aynur Guliyeva</li>
+                        <li>Egemen Alkan</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://1acs-2023-team-7.netlify.app/"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="marioGameModal" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Mario Jumping Game - Kreativestorm</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/mario.jpg"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="Mario Jumping Game"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      A fun and interactive JavaScript-based game inspired by
+                      the classic cactus runner! This project helped us dive
+                      deeper into JavaScript fundamentals by recreating simple
+                      game logic and applying event-driven programming with
+                      canvas animations.
+                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>February, 2024</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Deepen JavaScript knowledge through game development
+                        </li>
+                        <li>Recreate mechanics of the cactus jumping game</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice</li>
+                        <li>Kumang</li>
+                        <li>Peter</li>
+                        <li>Shaked</li>
+                        <li>David</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://fabriceelono.github.io/DinosaurGame/pages/game.html"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                Play Game
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="iot" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Mouse Trap - IoT Essentials</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/iot.jpeg"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="Mouse Trap"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      The IoT Mouse Trap project showcases the innovative use of Orange Pi to build a humane and efficient solution for rodent control. By integrating motors, sensors, and manual control buttons, the trap detects the presence of a mouse and responds in real-time. The project blends mechanical and software engineering to create a modern smart device for everyday use.
+                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>May, 2023</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Design a humane trap using Orange Pi
+                        </li>
+                        <li>Integrate sensors for mouse detection</li>
+                        <li>Control trap mechanism via motor</li>
+                        <li>Add manual control buttons for user interaction</li>
+                        <li>Ensure real-time performance and system reliability</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://www.youtube.com/watch?v=bGYL765k-KE/"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="modal fade" id="iot" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Mouse Trap - IoT Essentials</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/iot.jpeg"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="Mouse Trap"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      The IoT Mouse Trap project showcases the innovative use of Orange Pi to build a humane and efficient solution for rodent control. By integrating motors, sensors, and manual control buttons, the trap detects the presence of a mouse and responds in real-time. The project blends mechanical and software engineering to create a modern smart device for everyday use.
+                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>May, 2023</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Design a humane trap using Orange Pi
+                        </li>
+                        <li>Integrate sensors for mouse detection</li>
+                        <li>Control trap mechanism via motor</li>
+                        <li>Add manual control buttons for user interaction</li>
+                        <li>Ensure real-time performance and system reliability</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://www.youtube.com/watch?v=bGYL765k-KE/"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="php" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Mouse Trap - IoT Essentials</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/php.png"
+                    class="img-fluid mb-3 project-modal-image"
+                    alt="Mindful Memory"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="project-details">
+                    <p class="project-description">
+                      Mindful Memory is a user-focused web application that supports individuals with memory challenges in managing daily tasks. Built with Laravel Livewire and styled using Tailwind CSS, the app delivers a smooth, single-page experience with simple navigation. The project emphasizes accessibility and aims to improve users’ independence and quality of life.                    </p>
+
+                    <div class="project-meta">
+                      <h6 class="mt-3"><strong>Date:</strong></h6>
+                      <p>May, 2024</p>
+
+                      <h6 class="mt-3"><strong>Project Goals:</strong></h6>
+                      <ul class="project-goals">
+                        <li>
+                          Develop a reliable task reminder system for memory-impaired users
+                        </li>
+                        <li>Utilize Laravel Livewire for dynamic interactions</li>
+                        <li>Implement a clean, responsive interface using Tailwind CSS</li>
+                        <li>Ensure intuitive and user-friendly navigation</li>
+                      </ul>
+
+                      <h6 class="mt-3"><strong>Team Members:</strong></h6>
+                      <ul class="team-members">
+                        <li>Fabrice Elono</li>
+                        <li>Francesco Chrabieh</li>
+                        <li>Adrian Belmans</li>
+                        <li>Ayana Torgoeva</li>
+                        <li>Mark Vaykul</li>
+                        <li>Dominykas Railla</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a
+                href="https://lst-b.mindfulmemory.be/register"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                View Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -450,57 +1118,108 @@ awesome/6.2.0/css/all.min.css"
         onclick="location.href='./#contact'"
       />
     </section>
+
+    <!-- ESN PART -->
     <section id="esn">
       <p class="section__text__p1">Engaging with the Community</p>
       <h1 class="title">Erasmus Student Network</h1>
-      <div class="section-content">
-        <img src="./assets/esn.jpg" alt="ESN Logo" class="esn-logo" />
-        <p class="evolution-description">
-          As an active member of the Erasmus Student Network, I am deeply
-          involved in fostering student mobility in Higher Education. My
-          contributions to ESN include organizing cultural events, providing
-          support and guidance to international students, and advocating for
-          student exchange programs. Joining ESN has been a rewarding journey
-          that has allowed me to grow my network and enrich my educational
-          experience. I could improve my public speaking skills , become more
-          social .
-        </p>
-        <!-- Additional content like images, bullet points, etc. -->
+    
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="./assets/esn.jpg" alt="ESN Group" class="img-fluid rounded shadow" />
+          <p class="evolution-description mt-3">
+            I have been actively involved in ESN Geel, contributing to the student experience of incoming international students through events, buddy programs, and local community integration.
+          </p>
+        </div>
+    
+        <div class="col-md-6">
+          <div class="timeline right-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="text-primary">2022–2023: Event Manager</h4>
+                <p>Led inclusive cultural events and campus activities to help international students feel welcome and connected.</p>
+              </div>
+            </div>
+    
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="text-primary">2023–2024: Buddy Coordinator</h4>
+                <p>Managed the buddy system, pairing local and international students to support integration and community building.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="esn-evolution">
-        <h2 class="subtitle" style="text-align: center">
-          My Evolution in ESN Geel
-        </h2>
-        <img src="./assets//esn2023.jpg" alt="ESN2023" class="esn-logo" />
-        <p class="evolution-description">
-          My journey with the Erasmus Student Network has been a tale of
-          continuous growth and engagement. Starting as an
-          <strong>Event Manager in 2022-2023</strong>, I spearheaded the
-          planning and execution of memorable cultural and social events,
-          enhancing the Erasmus experience for students. Advancing into the role
-          of <strong>Buddy Coordinator in 2023-2024</strong>, I took on the
-          responsibility of matching local buddies with international students,
-          fostering friendships and ensuring a warm welcome to all participants
-          in the program. These roles have not only contributed to the vibrancy
-          of our ESN chapter but have also been instrumental in my personal and
-          professional development.
-        </p>
-      </div>
-      <div class="btn-container">
+    
+      <div class="btn-container mt-4">
         <button
           class="btn btn-color-1"
           onclick="window.open('./assets/Certificate2023.pdf')"
         >
-          Certificate 2023
+         2023
         </button>
         <button
           class="btn btn-color-1"
           onclick="window.open('./assets/Certificate2024.pdf')"
         >
-          Certificate 2024
+          2024
         </button>
       </div>
     </section>
+    
+<!-- Internship -->
+<section id="internship" class="section">
+  <p class="section__text__p1">Professional Experience</p>
+  <h2 class="title">Internship at KPMG</h2>
+
+  <div class="details-container">
+    <div class="icon-box">
+      <i class="fas fa-building"></i>
+    </div>
+
+    <div class="details-content">
+      <h3 class="highlight-title">Slide Generator Project</h3>
+      <p class="project-description">
+        During my internship at KPMG, I contributed to the early stages of a project focused on automating slide generation processes. This involved exploring solutions that could optimize manual presentation workflows.
+      </p>
+
+      <div class="project-meta">
+        <h4><i class="fas fa-file-alt"></i> Mandatory Documents</h4>
+        <ul class="project-goals">
+          <li>Project Plan</li>
+          <li>Realization Document</li>
+          <li>Reflection</li>
+        </ul>
+
+        <h4 class="mt-3"><i class="fas fa-folder-open"></i> Optional Documents</h4>
+        <p>More supporting materials will be added later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Achievements -->
+<section id="achievements" class="section">
+  <p class="section__text__p1">Showcasing Impact</p>
+  <h2 class="title">Achievements & Certificates</h2>
+
+  <div class="details-container under-construction">
+    <div class="icon-box">
+      <i class="fas fa-certificate"></i>
+    </div>
+    <div class="details-content">
+      <p>This section is currently under construction.</p>
+      <p>It will feature my hackathon highlights, certificates from online courses, and project accomplishments.</p>
+      <img src="./assets/under-construction.svg" alt="Under Construction" class="construction-img" />
+    </div>
+  </div>
+</section>
+
+
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -523,5 +1242,7 @@ awesome/6.2.0/css/all.min.css"
       <p>Copyright &#169; 2024 Fabrice Elono. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
