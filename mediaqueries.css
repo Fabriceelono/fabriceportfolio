@@ -137,3 +137,24 @@
     margin-bottom: 10px; /* Less margin to save space */
   }
 }
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 1.75rem 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .project-modal-image {
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .project-details {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}

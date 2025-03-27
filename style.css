@@ -383,7 +383,18 @@ section {
 }
 
 /* BUTTONS */
-
+.btn-primary {
+  border-radius: 3rem !important;
+  padding: 0.6rem 1.2rem !important;
+  min-width: 160px; /* or use width: 100% for full-width buttons */
+  text-align: center;
+}
+.btn-secondary {
+  padding: 0.6rem 1.2rem !important;
+  border-radius: 3rem !important;
+  min-width: 160px;
+  text-align: center;
+}
 .btn-container {
   display: flex;
   justify-content: center;
@@ -397,10 +408,18 @@ section {
   width: 8rem;
   border-radius: 2rem;
 }
-
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(36, 110, 185) 0.1rem solid;
+  padding: 0.6rem 2rem !important; /* wider horizontally */
+  border-radius: 3rem !important; /* pill shape */
+  font-weight: 600;
+  min-width: 160px; /* consistent width */
+  text-align: center;
+}
+.btn-color-1:hover,
+.btn-color-2:hover {
+  box-shadow: 0 8px 20px rgba(36, 110, 185, 0.2);
+  transform: scale(1.02);
 }
 
 .btn-color-1:hover,
@@ -416,6 +435,7 @@ section {
 
 .btn-color-1:hover {
   background: rgb(18, 49, 98);
+  color: white;
 }
 
 .btn-color-2 {
@@ -745,6 +765,13 @@ article .icon {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .project-card:hover .card {
+    transform: none;
+  }
+  .project-card:hover .card {
+    transform: none;
+    box-shadow: none;
+  }
+  .project-card:hover .card-body {
     transform: none;
   }
 }

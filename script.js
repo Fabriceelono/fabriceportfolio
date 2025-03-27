@@ -4,6 +4,7 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
+
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("nav");
   if (window.pageYOffset > 50) {
@@ -50,9 +51,8 @@ function typeName() {
 window.addEventListener("DOMContentLoaded", () => {
   cursor2.style.display = "none"; // hide second cursor initially
   typeIntro();
-});
 
-window.addEventListener("DOMContentLoaded", () => {
+  // Add floating image effect
   const profileImage = document.querySelector(".section__pic-container img");
   if (profileImage) {
     profileImage.classList.add("floating-image");
