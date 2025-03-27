@@ -40,7 +40,7 @@ nav {
   z-index: 1000;
   justify-content: space-around;
   align-items: center;
-  height: 12vh;
+  height: 9vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -61,10 +61,7 @@ nav {
     background-position: 0% 50%;
   }
 }
-nav.scrolled {
-  background-color: white; /* Change to white on scroll */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
+
 nav a {
   color: white; /* Initial color of links */
   text-decoration: none;
@@ -74,14 +71,53 @@ nav a.active {
   color: #ffcc00;
   font-weight: 600;
 }
-nav.scrolled a {
-  color: #333; /* Change to black on scroll */
-}
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 5px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  perspective: 1000px;
+}
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* 3D Hover Effect */
+.nav-links a:hover {
+  transform: translateZ(50px) scale(1.05);
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Active State */
+.nav-links a.active {
+  color: #ffcc00;
+  font-weight: 700;
 }
 
 a {
@@ -99,6 +135,7 @@ a:hover {
   font-size: 2.5rem;
   font-family: "Cinzel", serif;
   font-weight: 600;
+  color: #25476a;
 }
 
 .logo:hover {
@@ -434,7 +471,7 @@ section {
   bottom: 2.5rem;
 }
 
-.details-container {
+.details-container-profile {
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -443,11 +480,11 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
-.details-container .fa-solid {
+.details-container-profile .fa-solid {
   font-size: 25px;
   color: #246eb9;
 }
-.details-container h3 {
+.details-container-profile h3 {
   color: #246eb9;
 }
 
@@ -639,7 +676,78 @@ article .icon {
   width: 1em;
   margin-left: -1em;
 }
+/* Project Cards 3D Hover Effect */
+.project-card {
+  perspective: 1000px;
+  transition: all 0.5s ease;
+}
 
+.project-card .card {
+  position: relative;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.project-card:hover .card {
+  transform: rotateX(5deg) rotateY(-5deg) translateZ(30px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-img-top {
+  transform: scale(1.07);
+}
+
+.project-card .card-body {
+  transition: all 0.5s ease;
+}
+
+.project-card:hover .card-body {
+  transform: translateZ(20px);
+}
+
+.project-card .btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.project-card:hover .btn::before {
+  left: 100%;
+}
+
+/* Subtle Glow Effect */
+.project-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-card:hover .card {
+    transform: none;
+  }
+}
 /*ESN */
 #esn {
   padding: 4vh 10rem; /* Adjust padding as needed */
@@ -675,7 +783,7 @@ article .icon {
   /* Add other styles as needed */
 }
 /* Internship */
-.details-container {
+.details-container-profile {
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
@@ -684,6 +792,149 @@ article .icon {
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+/* Internship and Achievements Section Styling */
+.details-container {
+  display: flex;
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 4px 15px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box {
+  background: linear-gradient(135deg, #2c8ae9 0%, #76cee9 100%);
+  color: white;
+  width: 80px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.details-container:hover .icon-box {
+  background: linear-gradient(135deg, #2c78c5 0%, #76cee9 100%);
+}
+
+.icon-box i {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.details-container:hover .icon-box i {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.details-content {
+  flex-grow: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight-title {
+  color: #2c8ae9;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 33px;
+  position: relative;
+}
+
+.highlight-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #2c8ae9;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+}
+
+.project-meta {
+  background-color: #f4f7f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.project-meta h4 {
+  color: #2c8ae9;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project-meta h4 i {
+  margin-right: 0.75rem;
+  color: #2c8ae9;
+}
+
+.project-goals {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-goals li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project-goals li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2c8ae9;
+  font-weight: bold;
+}
+
+/* Under Construction Section */
+.under-construction {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+.construction-img {
+  max-width: 200px;
+  margin-top: 1rem;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.under-construction:hover .construction-img {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+  }
+
+  .icon-box {
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+  }
 }
 
 /* CONTACT */
@@ -750,7 +1001,7 @@ article .icon {
 }
 
 .project-description {
-  font-size: 0.9rem;
+  font-size: 20px;
   line-height: 1.6;
   color: #555;
   margin-bottom: 15px;
@@ -762,10 +1013,9 @@ article .icon {
   padding-bottom: 5px;
 }
 
-.project-goals,
-.team-members {
+.project-goals {
   padding-left: 20px;
-  font-size: 0.9rem;
+  font-size: 20px;
 }
 
 .modal-body {
