@@ -935,20 +935,30 @@ article .icon {
 }
 
 /* Under Construction Section */
-.under-construction {
-  text-align: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
-}
-
-.construction-img {
-  max-width: 200px;
+.certificate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0072bb;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
   margin-top: 1rem;
-  opacity: 0.8;
-  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: fit-content;
 }
 
-.under-construction:hover .construction-img {
-  transform: scale(1.05);
+.certificate-btn:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.certificate-btn i {
+  font-size: 1rem;
 }
 
 /* Responsive Adjustments */
@@ -965,54 +975,76 @@ article .icon {
 }
 
 /* CONTACT */
-
 #contact {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  height: 1000px;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1rem;
 }
 
-.contact-info-upper-container {
+.section__text__p1 {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #246eb9;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
   display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-wrap: wrap;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
+  width: 90%;
+  max-width: 500px;
 }
 
-.contact-info-container {
+.contact-button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
-}
-.contact-info-container i {
-  font-size: 28px;
-  color: #246eb9;
-}
-
-.contact-info-container p {
-  font-size: larger;
-}
-.contact-info-container a {
-  color: black;
-}
-.contact-info-container a:hover {
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
   text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-icon {
-  cursor: default;
+.contact-button i {
+  font-size: 1.3rem;
 }
 
-.email-icon {
-  height: 2.5rem;
+.contact-button.email {
+  background-color: #246eb9;
 }
+
+.contact-button.linkedin {
+  background-color: #0077b5;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .contact-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* project  */
 .project-card {
   margin-bottom: 20px;
 }
