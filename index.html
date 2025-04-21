@@ -1167,33 +1167,28 @@ awesome/6.2.0/css/all.min.css"
   
     <div class="project-meta">
       <h4><i class="fas fa-file-alt"></i> Mandatory Documents</h4>
-      <ul class="project-goals">
-        <li>Project Plan</li>
-        <li>Realization Document</li>
-        <li>Reflection</li>
-      </ul>
-  
-      <h4 class="mt-3"><i class="fas fa-calendar-alt"></i> Internship Details</h4>
-      <p class="project-description">Duration: February 2025 - May 2025(3 Months) </p>
-      <p class="project-description">Department: Intelligent Automation</p>
-  
-      <h4 class="mt-3"><i class="fas fa-tasks"></i> Project Objectives</h4>
-      <ul class="project-goals">
-        <li>Develop an automated slide generation tool to streamline presentation creation</li>
-        <li>Reduce manual formatting time by estimated 60%</li>
-        <li>Integrate machine learning techniques for intelligent content placement</li>
-      </ul>
-  
-      <h4 class="mt-3"><i class="fas fa-cogs"></i> Technologies Utilized</h4>
-      <ul class="project-goals">
-        <li>Python</li>
-        <li>Machine Learning Libraries</li>
-        <li>PowerPoint API</li>
-        <li>Data Analysis Tools</li>
-      </ul>
-  
-      <h4 class="mt-3"><i class="fas fa-folder-open"></i> Optional Documents</h4>
-      <p class="project-goals">More supporting materials will be added later.</p>
+      <div class="document-cards">
+        <div class="document-card" onclick="openDocModal('projectPlan')">
+          <h5>Project Plan</h5>
+        </div>
+        <div class="document-card" onclick="openDocModal('realizationDoc')">
+          <h5>Realization Document</h5>
+        </div>
+        <div class="document-card" onclick="openDocModal('reflection')">
+          <h5>Reflection</h5>
+        </div>
+        
+      </div>
+      
+      <!-- Modal Structure -->
+      <div id="doc-modal" class="doc-modal">
+        <div class="doc-modal-content">
+          <span class="doc-close-btn" onclick="closeDocModal()">&times;</span>
+          <h3 id="doc-modal-title"></h3>
+          <p id="doc-modal-overview">Overview will appear here...</p>
+          <a id="doc-modal-download" class="doc-download-btn" href="#" download>Download</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

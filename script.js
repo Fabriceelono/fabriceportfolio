@@ -58,3 +58,48 @@ window.addEventListener("DOMContentLoaded", () => {
     profileImage.classList.add("floating-image");
   }
 });
+
+//Modal Script
+(function () {
+  const modal = document.getElementById("doc-modal");
+  const modalTitle = document.getElementById("doc-modal-title");
+  const modalOverview = document.getElementById("doc-modal-overview");
+  const modalDownload = document.getElementById("doc-modal-download");
+
+  window.openDocModal = function (doc) {
+    const documents = {
+      projectPlan: {
+        title: "Project Plan",
+        overview:
+          "An outline of the goals, timeline, and expected deliverables of the slide generation project.",
+        file: "path/to/project-plan.pdf",
+      },
+      realizationDoc: {
+        title: "Realization Document",
+        overview:
+          "Detailed description of implementation steps, obstacles, and how the automation was achieved.",
+        file: "path/to/realization-document.pdf",
+      },
+      reflection: {
+        title: "Reflection",
+        overview:
+          "A personal reflection on the learning outcomes and contributions during the internship.",
+        file: "path/to/reflection.pdf",
+      },
+    };
+
+    const docData = documents[doc];
+    modalTitle.textContent = docData.title;
+    modalOverview.textContent = docData.overview;
+    modalDownload.href = docData.file;
+    modal.style.display = "flex";
+  };
+
+  window.closeDocModal = function () {
+    modal.style.display = "none";
+  };
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) closeDocModal();
+  });
+})();
