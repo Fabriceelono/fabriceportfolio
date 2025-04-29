@@ -71,8 +71,8 @@ window.addEventListener("DOMContentLoaded", () => {
       projectPlan: {
         title: "Project Plan",
         overview:
-          "An outline of the goals, timeline, and expected deliverables of the slide generation project.",
-        file: "path/to/project-plan.pdf",
+          "This document provides a detailed overview of the project’s objectives, timeline, and key deliverables. It serves as a roadmap that guided the execution of the project from initiation to completion.",
+        file: "assets/ProjectPlanKPMG2025.pdf",
       },
       realizationDoc: {
         title: "Realization Document",
