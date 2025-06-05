@@ -8,98 +8,83 @@ function toggleMenu() {
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("nav");
   if (window.pageYOffset > 50) {
-    // Adjust this value based on your needs
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
   }
 });
 
-const introText = "Hello, I'm ";
-const nameText = "Fabrice Elono";
+const greetings = ["Hello, I'm", "Bienvenue Je suis", "Welkom Ik ben"];
+const greetingEl = document.getElementById("greeting-loop");
+let greetingIndex = 0;
 
-const typedText = document.getElementById("typed-text");
-const typedName = document.getElementById("typed-name");
-const cursor1 = document.getElementById("cursor-1");
-const cursor2 = document.getElementById("cursor-2");
-
-let index = 0;
-let nameIndex = 0;
-
-function typeIntro() {
-  if (index < introText.length) {
-    typedText.textContent += introText.charAt(index);
-    index++;
-    setTimeout(typeIntro, 100);
-  } else {
-    cursor1.style.display = "none"; // hide first cursor
-    cursor2.style.display = "inline-block"; // show second
-    typeName(); // start next typing
-  }
+function showNextGreeting() {
+  greetingEl.style.opacity = 0;
+  setTimeout(() => {
+    greetingEl.textContent = greetings[greetingIndex];
+    greetingEl.style.opacity = 1;
+    greetingIndex = (greetingIndex + 1) % greetings.length;
+  }, 500);
 }
 
-function typeName() {
-  if (nameIndex < nameText.length) {
-    typedName.textContent += nameText.charAt(nameIndex);
-    nameIndex++;
-    setTimeout(typeName, 120);
-  } else {
-    cursor2.style.display = "none";
-  }
-}
+greetingEl.textContent = greetings[0];
+greetingEl.style.opacity = 1;
+setInterval(showNextGreeting, 2000);
 
 window.addEventListener("DOMContentLoaded", () => {
-  cursor2.style.display = "none"; // hide second cursor initially
-  typeIntro();
-
-  // Add floating image effect
   const profileImage = document.querySelector(".section__pic-container img");
   if (profileImage) {
     profileImage.classList.add("floating-image");
   }
-});
 
-//Modal Script
-(function () {
-  const modal = document.getElementById("doc-modal");
-  const modalTitle = document.getElementById("doc-modal-title");
-  const modalOverview = document.getElementById("doc-modal-overview");
-  const modalDownload = document.getElementById("doc-modal-download");
+  const toggleBtn = document.getElementById("toggleFacts");
+  const factsBlock = document.getElementById("aboutFacts");
+  let isOpen = false;
 
-  window.openDocModal = function (doc) {
-    const documents = {
-      projectPlan: {
-        title: "Project Plan",
-        overview:
-          "This document provides a detailed overview of the project’s objectives, timeline, and key deliverables. It serves as a roadmap that guided the execution of the project from initiation to completion.",
-        file: "assets/ProjectPlanKPMG2025.pdf",
-      },
-      realizationDoc: {
-        title: "Realization Document",
-        overview:
-          "Detailed description of implementation steps, obstacles, and how the automation was achieved.",
-        file: "path/to/realization-document.pdf",
-      },
-      reflection: {
-        title: "Reflection",
-        overview:
-          "A personal reflection on the learning outcomes and contributions during the internship.",
-        file: "path/to/reflection.pdf",
-      },
-    };
+  if (toggleBtn && factsBlock) {
+    toggleBtn.addEventListener("click", () => {
+      isOpen = !isOpen;
+      factsBlock.style.display = isOpen ? "block" : "none";
+      toggleBtn.innerHTML = isOpen
+        ? 'Less About Me <i class="fa-solid fa-chevron-up"></i>'
+        : 'More About Me <i class="fa-solid fa-chevron-down"></i>';
+    });
+  }
 
-    const docData = documents[doc];
-    modalTitle.textContent = docData.title;
-    modalOverview.textContent = docData.overview;
-    modalDownload.href = docData.file;
-    modal.style.display = "flex";
-  };
+  const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
+  const hiddenProjects = document.querySelector(".hidden-projects");
+  let showing = false;
 
-  window.closeDocModal = function () {
-    modal.style.display = "none";
-  };
+  if (toggleProjectsBtn && hiddenProjects) {
+    toggleProjectsBtn.addEventListener("click", () => {
+      showing = !showing;
+      hiddenProjects.style.display = showing ? "block" : "none";
+      toggleProjectsBtn.innerHTML = showing
+        ? 'View Less <i class="fa-solid fa-chevron-up"></i>'
+        : 'View More <i class="fa-solid fa-chevron-down"></i>';
+      toggleProjectsBtn.classList.toggle("rotated", showing);
+    });
+  }
+  const slides = document.querySelectorAll(".carousel-slide");
+  const dots = document.querySelectorAll(".carousel-dots .dot");
+  const track = document.querySelector(".carousel-track");
+  let currentIndex = 0;
 
-  window.addEventListener("click", function (event) {
-    if (event.target === modal) closeDocModal();
+  function showSlide(index) {
+    const offset = -index * 100;
+    track.style.transform = `translateX(${offset}vw)`;
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+    currentIndex = index;
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => showSlide(index));
   });
-})();
+
+  // Optional: auto-slide with dot sync
+  setInterval(() => {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }, 5000); // Adjust interval
+});

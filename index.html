@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Fabrice Elono | Aspiring Data Professional and Analyst. Explore my portfolio, experience, projects, and achievements.">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Fabrice Elono | Aspiring Data Professional and Analyst. Explore my portfolio, experience, projects, and achievements."
+    />
     <title>Fabrice Elono - Data Professional and Analyst</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-
 awesome/6.2.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link
@@ -29,9 +38,9 @@ awesome/6.2.0/css/all.min.css"
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#esn">ESN</a></li>
           <li><a href="#internship">Internship</a></li>
           <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#esn">ESN</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -48,6 +57,8 @@ awesome/6.2.0/css/all.min.css"
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#internship" onclick="toggleMenu()">Internship</a></li>
+          <li><a href="#achievements" onclick="toggleMenu()">Achievements</a></li>
           <li><a href="#esn" onclick="toggleMenu()">ESN</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -56,13 +67,12 @@ awesome/6.2.0/css/all.min.css"
     <section id="profile">
       <div class="section__text">
         <p class="section__text__p1">
-          <span id="typed-text"></span><span class="cursor" id="cursor-1">|</span>
+          <span id="greeting-loop"></span>
         </p>
-        <h1 class="title">
-          <span id="typed-name"></span><span class="cursor" id="cursor-2">|</span>
-        </h1>
+
+        <h1 class="title">Fabrice Elono</h1>
         <p class="section__text__p2">
-          Aspiring Data Professional and Data Analyst
+          Aspiring Data Professional and Developer
         </p>
         <div class="btn-container">
           <button
@@ -85,115 +95,194 @@ awesome/6.2.0/css/all.min.css"
         </div>
       </div>
       <div class="section__pic-container">
-        <img src="./assets/fabriceprofile.png" alt="Fabrice Elono smiling in blue hoodie" />
+        <img
+          src="./assets/fabriceprofile.png"
+          alt="Fabrice Elono smiling in blue hoodie"
+        />
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
+    <section id="about" class="section">
+      <h3 class="section__text__p1">Get To Know More</h3>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
+
+      <div class="about-layout">
+        <div class="about-image">
           <img
-            src="./assets/fabrice.jpg"
-            alt="Fabrice Elono smiling"
+            src="./assets/fabrice.png"
+            alt="Fabrice Elono"
             class="about-pic"
           />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container-profile">
+
+        <div class="about-content">
+          <p class="about-description">
+            I’m a 24-year-old Applied Computer Science student passionate about
+            solving problems with intelligent, data-driven solutions. I thrive
+            on hard work, growth, and creativity , whether it's building smarter
+            systems, exploring AI, or creating content. I'm driven by impact and
+            always eager to learn, improve, and push boundaries.
+          </p>
+
+          <div class="about-info-cards">
+            <div class="about-card">
               <i class="fa-solid fa-trophy"></i>
               <h3>Experience</h3>
-              <p>3+ years <br />Applied Computer Science</p>
+              <p>3+ years<br />Applied Computer Science</p>
             </div>
-            <div class="details-container-profile">
+            <div class="about-card">
               <i class="fa-solid fa-school"></i>
               <h3>Education</h3>
-              <p>Bachelor Degree at Thomas More <br />Geel , Belgium</p>
+              <p>Bachelor Degree<br />Thomas More, Belgium</p>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              I’m a 24-year-old Applied Computer Science student with a strong passion for data-driven problem solving and intelligent systems. I thrive on hard work, constantly seeking growth through new challenges—whether it's building smarter solutions or exploring creative outlets like content creation. I’m deeply motivated by the power of data and technology to create meaningful impact, and I’m always eager to learn, improve, and push boundaries.
-            </p>
+          <button id="toggleFacts" class="btn-toggle-facts">
+            More About Me <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div id="aboutFacts" class="about-facts-card" style="display: none">
+            <ul>
+              <li>
+                <i class="fa-brands fa-tiktok"></i> TikTok creator (17k+),
+                proudly representing Cameroon 🇨🇲
+              </li>
+              <li>
+                <i class="fa-solid fa-language"></i> I enjoy learning languages
+                — I’ve studied Dutch & Turkish
+              </li>
+              <li>
+                <i class="fa-solid fa-utensils"></i> Passionate about cooking
+                and trying new recipes
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
+
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
-    
+
       <div class="experience-details-container">
-    
         <!-- Frontend -->
         <div class="experience-category">
-          <h3 class="experience-title"><i class="fas fa-code"></i> Frontend Development</h3>
+          <h3 class="experience-title">
+            <i class="fas fa-code"></i> Frontend Development
+          </h3>
           <div class="skill-badges">
-            <span class="skill-badge frontend-badge"><i class="fab fa-html5"></i> HTML – Experienced</span>
-            <span class="skill-badge frontend-badge"><i class="fab fa-css3-alt"></i> CSS – Experienced</span>
-            <span class="skill-badge frontend-badge"><i class="fab fa-sass"></i> SASS – Intermediate</span>
-            <span class="skill-badge frontend-badge"><i class="fab fa-js-square"></i> JavaScript – Basic</span>
-            <span class="skill-badge frontend-badge"><i class="fab fa-php"></i> PHP – Intermediate</span>
-            <span class="skill-badge frontend-badge"><i class="fas fa-stream"></i> Laravel – Intermediate</span>
+            <span class="skill-badge frontend-badge"
+              ><i class="fab fa-html5"></i> HTML – Experienced</span
+            >
+            <span class="skill-badge frontend-badge"
+              ><i class="fab fa-css3-alt"></i> CSS – Experienced</span
+            >
+            <span class="skill-badge frontend-badge"
+              ><i class="fab fa-sass"></i> SASS – Intermediate</span
+            >
+            <span class="skill-badge frontend-badge"
+              ><i class="fab fa-js-square"></i> JavaScript – Basic</span
+            >
+            <span class="skill-badge frontend-badge"
+              ><i class="fab fa-php"></i> PHP – Intermediate</span
+            >
+            <span class="skill-badge frontend-badge"
+              ><i class="fas fa-stream"></i> Laravel – Intermediate</span
+            >
           </div>
         </div>
-        
-    
+
         <!-- Backend -->
         <div class="experience-category">
-          <h3 class="experience-title"><i class="fas fa-server"></i> Backend & Databases</h3>
+          <h3 class="experience-title">
+            <i class="fas fa-server"></i> Backend & Databases
+          </h3>
           <div class="skill-badges">
-            <span class="skill-badge backend-badge"><i class="fab fa-node-js"></i> Node.js – Basic</span>
-            <span class="skill-badge backend-badge"><i class="fas fa-database"></i> MariaDB – Basic</span>
-            <span class="skill-badge backend-badge"><i class="fas fa-database"></i> MySQL – Intermediate</span>
-            <span class="skill-badge backend-badge"><i class="fas fa-database"></i> MongoDB – Intermediate</span>
+            <span class="skill-badge backend-badge"
+              ><i class="fab fa-node-js"></i> Node.js – Basic</span
+            >
+            <span class="skill-badge backend-badge"
+              ><i class="fas fa-database"></i> MariaDB – Basic</span
+            >
+            <span class="skill-badge backend-badge"
+              ><i class="fas fa-database"></i> MySQL – Intermediate</span
+            >
+            <span class="skill-badge backend-badge"
+              ><i class="fas fa-database"></i> MongoDB – Intermediate</span
+            >
           </div>
         </div>
-    
+
         <!-- Programming Languages -->
         <div class="experience-category">
-          <h3 class="experience-title"><i class="fas fa-code"></i> Programming Languages</h3>
+          <h3 class="experience-title">
+            <i class="fas fa-code"></i> Programming Languages
+          </h3>
           <div class="skill-badges">
-            <span class="skill-badge programming-badge"><i class="fab fa-python"></i> Python – Experienced</span>
-            <span class="skill-badge programming-badge"><i class="fab fa-java"></i> Java – Experienced</span>
-            <span class="skill-badge programming-badge"><i class="fas fa-code"></i> .NET – Intermediate</span>
+            <span class="skill-badge programming-badge"
+              ><i class="fab fa-python"></i> Python – Experienced</span
+            >
+            <span class="skill-badge programming-badge"
+              ><i class="fab fa-java"></i> Java – Experienced</span
+            >
+            <span class="skill-badge programming-badge"
+              ><i class="fas fa-code"></i> .NET – Intermediate</span
+            >
           </div>
         </div>
-    
+
         <!-- AI & Machine Learning -->
         <div class="experience-category">
-          <h3 class="experience-title"><i class="fas fa-brain"></i> AI & Machine Learning (2024)</h3>
+          <h3 class="experience-title">
+            <i class="fas fa-brain"></i> AI & Machine Learning (2024)
+          </h3>
           <div class="skill-badges">
-            <span class="skill-badge ai-badge"><i class="fas fa-rocket"></i> FastAI – Intermediate</span>
-            <span class="skill-badge ai-badge"><i class="fas fa-eye"></i> YOLOv5 – Intermediate</span>
-            <span class="skill-badge ai-badge"><i class="fas fa-network-wired"></i> crewAI – Basic</span>
-            <span class="skill-badge ai-badge"><i class="fas fa-window-restore"></i> Streamlit – Experienced</span>
-            <span class="skill-badge ai-badge"><i class="fas fa-robot"></i> LLM APIs (OpenAI, Groq) – Intermediate</span>
+            <span class="skill-badge ai-badge"
+              ><i class="fas fa-rocket"></i> FastAI – Intermediate</span
+            >
+            <span class="skill-badge ai-badge"
+              ><i class="fas fa-eye"></i> YOLOv5 – Intermediate</span
+            >
+            <span class="skill-badge ai-badge"
+              ><i class="fas fa-network-wired"></i> crewAI – Basic</span
+            >
+            <span class="skill-badge ai-badge"
+              ><i class="fas fa-window-restore"></i> Streamlit –
+              Experienced</span
+            >
+            <span class="skill-badge ai-badge"
+              ><i class="fas fa-robot"></i> LLM APIs (OpenAI, Groq) –
+              Intermediate</span
+            >
           </div>
         </div>
-    
+
         <!-- Data Analytics -->
         <div class="experience-category">
-          <h3 class="experience-title"><i class="fas fa-chart-bar"></i> Data Analytics & BI (2024)</h3>
+          <h3 class="experience-title">
+            <i class="fas fa-chart-bar"></i> Data Analytics & BI (2024)
+          </h3>
           <div class="skill-badges">
-            <span class="skill-badge data-badge"><i class="fas fa-chart-pie"></i> Qlik Sense – Intermediate</span>
-            <span class="skill-badge data-badge"><i class="fas fa-chart-line"></i> Power BI – Basic</span>
-            <span class="skill-badge data-badge"><i class="fas fa-table"></i> Pandas – Intermediate</span>
-            <span class="skill-badge data-badge"><i class="fas fa-square-root-variable"></i> Numpy – Intermediate</span>
-            <span class="skill-badge data-badge"><i class="fas fa-sitemap"></i> Data Modeling – Intermediate</span>
+            <span class="skill-badge data-badge"
+              ><i class="fas fa-chart-pie"></i> Qlik Sense – Intermediate</span
+            >
+            <span class="skill-badge data-badge"
+              ><i class="fas fa-chart-line"></i> Power BI – Basic</span
+            >
+            <span class="skill-badge data-badge"
+              ><i class="fas fa-table"></i> Pandas – Intermediate</span
+            >
+            <span class="skill-badge data-badge"
+              ><i class="fas fa-square-root-variable"></i> Numpy –
+              Intermediate</span
+            >
+            <span class="skill-badge data-badge"
+              ><i class="fas fa-sitemap"></i> Data Modeling – Intermediate</span
+            >
           </div>
         </div>
-    
       </div>
     </section>
-    
+
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -208,7 +297,9 @@ awesome/6.2.0/css/all.min.css"
             <div class="card-body">
               <h5 class="card-title">NLP Challenge - Deep Learning</h5>
               <p class="card-text">
-                A personalized learning assistant powered by LLMs, built with Streamlit and crewAI, capable of answering questions, generating summaries, and creating quizzes from course materials.
+                A personalized learning assistant powered by LLMs, built with
+                Streamlit and crewAI, capable of answering questions, generating
+                summaries, and creating quizzes from course materials.
               </p>
               <div class="text-center">
                 <button
@@ -234,7 +325,9 @@ awesome/6.2.0/css/all.min.css"
             <div class="card-body">
               <h5 class="card-title">Noober Caepool App - Project 4.0</h5>
               <p class="card-text">
-                A smart carpooling app that predicts ideal ride combinations based on location, preferences, and events, while offering a smooth, mobile-friendly experience.
+                A smart carpooling app that predicts ideal ride combinations
+                based on location, preferences, and events, while offering a
+                smooth, mobile-friendly experience.
               </p>
               <div class="text-center">
                 <button
@@ -258,9 +351,13 @@ awesome/6.2.0/css/all.min.css"
               alt="Fabrice ELONO FT - TML Project"
             />
             <div class="card-body">
-              <h5 class="card-title">Tomorrowland Analytics (Epic Data) - Business Intelligence </h5>
+              <h5 class="card-title">
+                Tomorrowland Analytics (Epic Data) - Business Intelligence
+              </h5>
               <p class="card-text">
-                A BI dashboard and web story built with Qlik Sense, uncovering insights into visitor behavior, sales, and trends at Tomorrowland using real data and visual storytelling.
+                A BI dashboard and web story built with Qlik Sense, uncovering
+                insights into visitor behavior, sales, and trends at
+                Tomorrowland using real data and visual storytelling.
               </p>
               <div class="text-center">
                 <button
@@ -276,6 +373,7 @@ awesome/6.2.0/css/all.min.css"
           </div>
         </div>
       </div>
+      <div class="hidden-projects" style="display: none">
       <div class="row">
         <div class="col-md-4 project-card">
           <div class="card">
@@ -341,8 +439,8 @@ awesome/6.2.0/css/all.min.css"
             <div class="card-body">
               <h5 class="card-title">Mario Jumping Game - Kreativestorm</h5>
               <p class="card-text">
-                I had a training program with company Kreativestorm to build a
-                Jumping Game.
+                I had a training program with Kreativestorm to build a Jumping
+                Game.
               </p>
               <div class="text-center">
                 <button
@@ -369,7 +467,12 @@ awesome/6.2.0/css/all.min.css"
             <div class="card-body">
               <h5 class="card-title">Mouse Trap - IoT Essentials</h5>
               <p class="card-text">
-                The IoT Mouse Trap project showcases the innovative use of Orange Pi to build a humane and efficient solution for rodent control. By integrating motors, sensors, and manual control buttons, the trap detects the presence of a mouse and responds in real-time. The project blends mechanical and software engineering to create a modern smart device for everyday use.
+                The IoT Mouse Trap project showcases the innovative use of
+                Orange Pi to build a humane and efficient solution for rodent
+                control. By integrating motors, sensors, and manual control
+                buttons, the trap detects the presence of a mouse and responds
+                in real-time. The project blends mechanical and software
+                engineering to create a modern smart device for everyday use.
               </p>
               <div class="text-center">
                 <button
@@ -395,7 +498,9 @@ awesome/6.2.0/css/all.min.css"
             <div class="card-body">
               <h5 class="card-title">Mindful Memory - Project PHP</h5>
               <p class="card-text">
-                A task reminder app built with Laravel and Livewire, designed to assist users with memory impairments through a clean, intuitive UI.
+                A task reminder app built with Laravel and Livewire, designed to
+                assist users with memory impairments through a clean, intuitive
+                UI.
               </p>
               <div class="text-center">
                 <button
@@ -410,8 +515,17 @@ awesome/6.2.0/css/all.min.css"
             </div>
           </div>
         </div>
-
-
+      </div>
+      </div>
+        <div class="text-center mt-4">
+      <div class="text-center mt-4">
+        <button id="toggleProjectsBtn" class="view-more-btn">
+          View More Projects<i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+  </div>
+      
+      </section>
 
       <!-- Modals -->
       <div class="modal fade" id="nlp" tabindex="-1">
@@ -432,7 +546,12 @@ awesome/6.2.0/css/all.min.css"
                 <div class="col-md-6">
                   <div class="project-details">
                     <p class="project-description">
-                      The NLP Challenge was a one-week deep learning project where we built a personalized learning assistant using Streamlit and the crewAI multi-agent framework. The assistant could answer questions, generate summaries, and create quizzes based on course documents using a custom RAG pipeline with vector databases and the Groq LLM API.
+                      The NLP Challenge was a one-week deep learning project
+                      where we built a personalized learning assistant using
+                      Streamlit and the crewAI multi-agent framework. The
+                      assistant could answer questions, generate summaries, and
+                      create quizzes based on course documents using a custom
+                      RAG pipeline with vector databases and the Groq LLM API.
                     </p>
 
                     <div class="project-meta">
@@ -442,13 +561,17 @@ awesome/6.2.0/css/all.min.css"
                       <h6 class="mt-3"><strong>Project Goals:</strong></h6>
                       <ul class="project-goals">
                         <li>
-                          Build a Streamlit interface with chatbot, document upload, and model selector
+                          Build a Streamlit interface with chatbot, document
+                          upload, and model selector
                         </li>
                         <li>
                           Implement a custom RAG-based question answering system
                         </li>
                         <li>Store and retrieve data using a vector database</li>
-                        <li>Extend with agents like quiz generation or cheat sheet summarization</li>
+                        <li>
+                          Extend with agents like quiz generation or cheat sheet
+                          summarization
+                        </li>
                       </ul>
 
                       <h6 class="mt-3"><strong>Team Members:</strong></h6>
@@ -507,7 +630,13 @@ awesome/6.2.0/css/all.min.css"
                 <div class="col-md-6">
                   <div class="project-details">
                     <p class="project-description">
-                      Noober is a smart carpooling application designed to match colleagues for ride-sharing based on personal and logistical preferences such as location, music taste, and event attendance. The app uses predictive algorithms to suggest optimal carpool combinations and pickup points, promoting sustainability and employee well-being.                    </p>
+                      Noober is a smart carpooling application designed to match
+                      colleagues for ride-sharing based on personal and
+                      logistical preferences such as location, music taste, and
+                      event attendance. The app uses predictive algorithms to
+                      suggest optimal carpool combinations and pickup points,
+                      promoting sustainability and employee well-being.
+                    </p>
 
                     <div class="project-meta">
                       <h6 class="mt-3"><strong>Date:</strong></h6>
@@ -516,14 +645,17 @@ awesome/6.2.0/css/all.min.css"
                       <h6 class="mt-3"><strong>Project Goals:</strong></h6>
                       <ul class="project-goals">
                         <li>
-                          Create profiles with address, car type, and preferences
+                          Create profiles with address, car type, and
+                          preferences
                         </li>
                         <li>
-                          Predict optimal carpool combinations using custom logic
+                          Predict optimal carpool combinations using custom
+                          logic
                         </li>
-                        <li>Suggest ideal pickup points based on driving distance</li>
-                        <li>Develop a scalable backend with a REST API
+                        <li>
+                          Suggest ideal pickup points based on driving distance
                         </li>
+                        <li>Develop a scalable backend with a REST API</li>
                       </ul>
 
                       <h6 class="mt-3"><strong>Team Members:</strong></h6>
@@ -549,11 +681,11 @@ awesome/6.2.0/css/all.min.css"
                 Close
               </button>
               <a
-                href="https://youtu.be/-dfTWIm0kos?si=cqSia2JMxjan5ZxE"
+                href="https://youtu.be/AjyEeuK6Cck"
                 class="btn btn-primary"
                 target="_blank"
               >
-                View Project
+                Demo Video
               </a>
             </div>
           </div>
@@ -563,7 +695,9 @@ awesome/6.2.0/css/all.min.css"
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Tomorrowland Analytics (Epic Data) - Business Intelligence</h5>
+              <h5 class="modal-title">
+                Tomorrowland Analytics (Epic Data) - Business Intelligence
+              </h5>
               <button
                 type="button"
                 class="close"
@@ -585,7 +719,14 @@ awesome/6.2.0/css/all.min.css"
                 <div class="col-md-6">
                   <div class="project-details">
                     <p class="project-description">
-                      Tomorrowland Analytics is a full-stack Business Intelligence project powered by Qlik Sense. Using real-world festival data, we built a dynamic dashboard for stakeholders like the mayor of Boom and the event organizers. The project focused on transforming raw data into actionable insights through a strong data model and effective storytelling with embedded analytics.                    </p>
+                      Tomorrowland Analytics is a full-stack Business
+                      Intelligence project powered by Qlik Sense. Using
+                      real-world festival data, we built a dynamic dashboard for
+                      stakeholders like the mayor of Boom and the event
+                      organizers. The project focused on transforming raw data
+                      into actionable insights through a strong data model and
+                      effective storytelling with embedded analytics.
+                    </p>
 
                     <div class="project-meta">
                       <h6 class="mt-3"><strong>Date:</strong></h6>
@@ -594,14 +735,24 @@ awesome/6.2.0/css/all.min.css"
                       <h6 class="mt-3"><strong>Project Goals:</strong></h6>
                       <ul class="project-goals">
                         <li>
-                          Design and implement a clean data model using Qlik scripting
+                          Design and implement a clean data model using Qlik
+                          scripting
                         </li>
                         <li>
-                          Build a multi-sheet dashboard showing insights on sales, food, visitors, etc.
+                          Build a multi-sheet dashboard showing insights on
+                          sales, food, visitors, etc.
                         </li>
-                        <li>Apply advanced data visualizations (e.g. box plot, distribution plot)</li>
-                        <li>Use set analysis and master items for consistency</li>
-                        <li>Develop a companion web app with embedded Qlik objects to narrate the story behind the data</li>
+                        <li>
+                          Apply advanced data visualizations (e.g. box plot,
+                          distribution plot)
+                        </li>
+                        <li>
+                          Use set analysis and master items for consistency
+                        </li>
+                        <li>
+                          Develop a companion web app with embedded Qlik objects
+                          to narrate the story behind the data
+                        </li>
                       </ul>
 
                       <h6 class="mt-3"><strong>Team Members:</strong></h6>
@@ -899,7 +1050,13 @@ awesome/6.2.0/css/all.min.css"
                 <div class="col-md-6">
                   <div class="project-details">
                     <p class="project-description">
-                      The IoT Mouse Trap project showcases the innovative use of Orange Pi to build a humane and efficient solution for rodent control. By integrating motors, sensors, and manual control buttons, the trap detects the presence of a mouse and responds in real-time. The project blends mechanical and software engineering to create a modern smart device for everyday use.
+                      The IoT Mouse Trap project showcases the innovative use of
+                      Orange Pi to build a humane and efficient solution for
+                      rodent control. By integrating motors, sensors, and manual
+                      control buttons, the trap detects the presence of a mouse
+                      and responds in real-time. The project blends mechanical
+                      and software engineering to create a modern smart device
+                      for everyday use.
                     </p>
 
                     <div class="project-meta">
@@ -908,13 +1065,13 @@ awesome/6.2.0/css/all.min.css"
 
                       <h6 class="mt-3"><strong>Project Goals:</strong></h6>
                       <ul class="project-goals">
-                        <li>
-                          Design a humane trap using Orange Pi
-                        </li>
+                        <li>Design a humane trap using Orange Pi</li>
                         <li>Integrate sensors for mouse detection</li>
                         <li>Control trap mechanism via motor</li>
                         <li>Add manual control buttons for user interaction</li>
-                        <li>Ensure real-time performance and system reliability</li>
+                        <li>
+                          Ensure real-time performance and system reliability
+                        </li>
                       </ul>
 
                       <h6 class="mt-3"><strong>Team Members:</strong></h6>
@@ -946,8 +1103,7 @@ awesome/6.2.0/css/all.min.css"
         </div>
       </div>
 
-
-       <div class="modal fade" id="iot" tabindex="-1">
+      <div class="modal fade" id="iot" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -973,7 +1129,13 @@ awesome/6.2.0/css/all.min.css"
                 <div class="col-md-6">
                   <div class="project-details">
                     <p class="project-description">
-                      The IoT Mouse Trap project showcases the innovative use of Orange Pi to build a humane and efficient solution for rodent control. By integrating motors, sensors, and manual control buttons, the trap detects the presence of a mouse and responds in real-time. The project blends mechanical and software engineering to create a modern smart device for everyday use.
+                      The IoT Mouse Trap project showcases the innovative use of
+                      Orange Pi to build a humane and efficient solution for
+                      rodent control. By integrating motors, sensors, and manual
+                      control buttons, the trap detects the presence of a mouse
+                      and responds in real-time. The project blends mechanical
+                      and software engineering to create a modern smart device
+                      for everyday use.
                     </p>
 
                     <div class="project-meta">
@@ -982,13 +1144,13 @@ awesome/6.2.0/css/all.min.css"
 
                       <h6 class="mt-3"><strong>Project Goals:</strong></h6>
                       <ul class="project-goals">
-                        <li>
-                          Design a humane trap using Orange Pi
-                        </li>
+                        <li>Design a humane trap using Orange Pi</li>
                         <li>Integrate sensors for mouse detection</li>
                         <li>Control trap mechanism via motor</li>
                         <li>Add manual control buttons for user interaction</li>
-                        <li>Ensure real-time performance and system reliability</li>
+                        <li>
+                          Ensure real-time performance and system reliability
+                        </li>
                       </ul>
 
                       <h6 class="mt-3"><strong>Team Members:</strong></h6>
@@ -1045,7 +1207,14 @@ awesome/6.2.0/css/all.min.css"
                 <div class="col-md-6">
                   <div class="project-details">
                     <p class="project-description">
-                      Mindful Memory is a user-focused web application that supports individuals with memory challenges in managing daily tasks. Built with Laravel Livewire and styled using Tailwind CSS, the app delivers a smooth, single-page experience with simple navigation. The project emphasizes accessibility and aims to improve users’ independence and quality of life.                    </p>
+                      Mindful Memory is a user-focused web application that
+                      supports individuals with memory challenges in managing
+                      daily tasks. Built with Laravel Livewire and styled using
+                      Tailwind CSS, the app delivers a smooth, single-page
+                      experience with simple navigation. The project emphasizes
+                      accessibility and aims to improve users’ independence and
+                      quality of life.
+                    </p>
 
                     <div class="project-meta">
                       <h6 class="mt-3"><strong>Date:</strong></h6>
@@ -1054,10 +1223,16 @@ awesome/6.2.0/css/all.min.css"
                       <h6 class="mt-3"><strong>Project Goals:</strong></h6>
                       <ul class="project-goals">
                         <li>
-                          Develop a reliable task reminder system for memory-impaired users
+                          Develop a reliable task reminder system for
+                          memory-impaired users
                         </li>
-                        <li>Utilize Laravel Livewire for dynamic interactions</li>
-                        <li>Implement a clean, responsive interface using Tailwind CSS</li>
+                        <li>
+                          Utilize Laravel Livewire for dynamic interactions
+                        </li>
+                        <li>
+                          Implement a clean, responsive interface using Tailwind
+                          CSS
+                        </li>
                         <li>Ensure intuitive and user-friendly navigation</li>
                       </ul>
 
@@ -1094,101 +1269,63 @@ awesome/6.2.0/css/all.min.css"
           </div>
         </div>
       </div>
-
-     
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
 
-    <!-- ESN PART -->
-    <section id="esn">
-      <p class="section__text__p1">Engaging with the Community</p>
-      <h1 class="title">Erasmus Student Network</h1>
-    
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="./assets/esn.jpg" alt="ESN Group" class="img-fluid rounded shadow" />
-          <p class="evolution-description mt-3">
-            I have been actively involved in ESN Geel, contributing to the student experience of incoming international students through events, buddy programs, and local community integration.
-          </p>
-        </div>
-    
-        <div class="col-md-6">
-          <div class="timeline right-timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h4 class="text-primary">2022–2023: Event Manager</h4>
-                <p>Led inclusive cultural events and campus activities to help international students feel welcome and connected.</p>
-              </div>
-            </div>
-    
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h4 class="text-primary">2023–2024: Buddy Coordinator</h4>
-                <p>Managed the buddy system, pairing local and international students to support integration and community building.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="btn-container mt-4">
-        <button
-          class="btn btn-color-1"
-          onclick="window.open('./assets/Certificate2023.pdf')"
-        >
-         2023
-        </button>
-        <button
-          class="btn btn-color-1"
-          onclick="window.open('./assets/Certificate2024.pdf')"
-        >
-          2024
-        </button>
-      </div>
-    </section>
-    
-<!-- Internship -->
-<section id="internship" class="section">
-  <p class="section__text__p1">Professional Experience</p>
-  <h2 class="title">Internship at KPMG</h2>
 
-  <div class="details-content">
-    <h3 class="highlight-title">Slide Generator & Banking Control Automation Project</h3>
-    <p class="project-description">
-      During my internship at KPMG, I contributed to the early stages of a project focused on automating slide generation processes. This involved exploring solutions that could optimize manual presentation workflows.
-    </p>
-  
-    <div class="project-meta">
-      <h4><i class="fas fa-file-alt"></i> Mandatory Documents</h4>
-      <div class="document-cards">
-        <div class="document-card" onclick="openDocModal('projectPlan')">
-          <h5>Project Plan</h5>
-        </div>
-        <div class="document-card" onclick="openDocModal('realizationDoc')">
-          <h5>Realization Document</h5>
-        </div>
-        <div class="document-card" onclick="openDocModal('reflection')">
-          <h5>Reflection</h5>
-        </div>
-        
-      </div>
-      
-      <!-- Modal Structure -->
-      <div id="doc-modal" class="doc-modal">
-        <div class="doc-modal-content">
-          <span class="doc-close-btn" onclick="closeDocModal()">&times;</span>
-          <h3 id="doc-modal-title"></h3>
-          <p id="doc-modal-overview">Overview will appear here...</p>
-          <a id="doc-modal-download" class="doc-download-btn" href="#" download>Download</a>
-        </div>
-      </div>
+    <!-- Internship -->
+<section id="internship" class="section internship-kpmg">
+        <p class="section__text__p1">Professional Experience</p>
+      <h2 class="title">Internship at KPMG</h2>
+  <div class="internship-container">
+    <div class="internship-text">
+      <h3>KPMG Belgium</h3>
+      <p>
+        I completed my 13-week internship at <strong>KPMG Belgium</strong> in the Intelligent Automation team. KPMG is a global leader in professional services, focusing on audit, advisory, and innovation. My role was to contribute to AI-powered automation solutions aimed at optimizing internal operations.
+      </p>
+
+      <h4>Mission & Vision</h4>
+      <p>
+        The Intelligent Automation team aims to modernize and streamline repetitive tasks using cutting-edge AI tools and process optimization strategies. The mission is to empower teams to work smarter, not harder, and to bring consistency and scalability to knowledge-heavy domains.
+      </p>
+
+      <h4>Assignment</h4>
+      <p>
+        I contributed to two major projects:
+        <br><strong>• Slide Generator</strong> — Automating slide creation using AI and dynamic data.
+        <br><strong>• Banking Control Automation</strong> — Identifying duplicate financial controls and analyzing their quality by assigning a similarity score using sentence embeddings and cosine similarity.
+      </p>
+  <h3 class="documents-heading">Documents</h3>
+<p class="documents-description">
+These documents summarize the planning, execution, and reflection phases of my internship at KPMG. Each file provides detailed insight into what I worked on, how I approached the tasks, and the overall learning outcomes.<br />
+</p>
+
+<div class="document-section">
+<a href="./assets/ProjectPlanKPMG2025.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
+  <img src="./assets/pp.svg" alt="Plan of Approach Icon" />
+  <h4>Plan of Approach</h4>
+  <p>Open document</p>
+</a>
+
+
+<a href="./assets/realization-document.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
+  <img src="./assets/realisation.svg" alt="Realization Report Icon" />
+  <h4>Realisation Report</h4>
+  <p>Open document</p>
+</a>
+
+<a href="./assets/reflection.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
+  <img src="./assets/reflection.svg" alt="Reflection Report Icon" />
+  <h4>Reflection Report</h4>
+  <p>Open document</p>
+</a>
+
+</div>
+
+
+    </div>
+
+    <div class="internship-logo">
+      <img src="./assets/KPMG_logo.svg" alt="KPMG Logo" />
     </div>
   </div>
 </section>
@@ -1198,46 +1335,119 @@ awesome/6.2.0/css/all.min.css"
   <p class="section__text__p1">Showcasing Impact</p>
   <h2 class="title">Achievements & Certificates</h2>
 
-  <div class="details-container">
-    <div class="icon-box">
-      <i class="fas fa-robot"></i>
-    </div>
-    <div class="details-content">
-      <h3 class="highlight-title">UiPath RPA Developer</h3>
-      <p class="project-description">
-        Completed a 30.5-hour hands-on course in robotic process automation (RPA) using UiPath. Built 7 bots and gained solid foundations in automation tools.
-      </p>
-      <div class="project-meta">
-        <h4><i class="fas fa-calendar-alt"></i>Issued: Jan 2025</h4>
-        <h4><i class="fas fa-id-badge"></i>Credential ID: UC-fea2776e-14d7-4bae-a269-e917a835eea9</h4>
-        <a href="https://www.udemy.com/certificate/UC-fea2776e-14d7-4bae-a269-e917a835eea9/" class="certificate-btn" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View Certificate
-        </a>     
-       </div>
-    </div>
-  </div>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Card 1 -->
+      <div class="carousel-slide details-container">
+        <div class="icon-box logo-box">
+          <img src="./assets/uipath-logo.jpg" alt="UiPath Logo" />
+        </div>
+        <div class="details-content">
+          <h3 class="highlight-title">UiPath RPA Developer</h3>
+          <p class="project-description">
+            Completed a 30.5-hour hands-on course in Robotic Process Automation using UiPath.
+            Built 7 bots and gained solid foundations in automation tools.
+          </p>
+          <p class="certificate-date">Issued: Jan 2025</p>
+          <a
+            href="https://www.udemy.com/certificate/UC-fea2776e-14d7-4bae-a269-e917a835eea9/"
+            class="certificate-btn"
+            target="_blank"
+          >
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+      </div>
 
-  <div class="details-container">
-    <div class="icon-box">
-      <i class="fas fa-code"></i>
-    </div>
-    <div class="details-content">
-      <h3 class="highlight-title">Frontend Training Program</h3>
-      <p class="project-description">
-        Completed an intensive program by Kreativstorm focused on JavaScript, HTML5, CSS and UI/UX principles. Developed real-world frontend apps.
-      </p>
-      <div class="project-meta">
-        <h4><i class="fas fa-calendar-alt"></i>Issued: Jan 2024 &nbsp;&nbsp;|&nbsp;&nbsp; Expires: Feb 2030</h4>
-        <h4><i class="fas fa-id-badge"></i>Credential ID: 453b3063-ce6942b7-aacb377ee49cb264</h4>
-        <a href="https://credsverse.com/credentials/453b3063-ce69-42b7-aacb-377ee49cb264" class="certificate-btn" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View Certificate
-        </a>   
+      <!-- Card 2 -->
+      <div class="carousel-slide details-container">
+        <div class="icon-box logo-box">
+          <img src="./assets/kreativstorm_logo.jpeg" alt="Kreativstorm Logo" />
+        </div>
+        <div class="details-content">
+          <h3 class="highlight-title">Frontend Training Program</h3>
+          <p class="project-description">
+            Completed an intensive program by Kreativstorm focused on JavaScript, HTML5, CSS,
+            and UI/UX principles. Developed real-world frontend apps.
+          </p>
+          <p class="certificate-date">Issued: Jan 2024</p>
+          <a
+            href="https://credsverse.com/credentials/453b3063-ce69-42b7-aacb377ee49cb264"
+            class="certificate-btn"
+            target="_blank"
+          >
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
       </div>
     </div>
+    <div class="carousel-dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+</div>
   </div>
 </section>
+    <!-- ESN PART -->
+    <section id="esn">
+      <p class="section__text__p1">Engaging with the Community</p>
+      <h1 class="title">Erasmus Student Network</h1>
 
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img
+            src="./assets/esn.jpg"
+            alt="ESN Group"
+            class="img-fluid rounded shadow"
+          />
+          <p class="evolution-description mt-3">
+            I have been actively involved in ESN Geel, contributing to the
+            student experience of incoming international students through
+            events, buddy programs, and local community integration.
+          </p>
+        </div>
 
+        <div class="col-md-6">
+          <div class="timeline right-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="text-primary">2022–2023: Event Manager</h4>
+                <p>
+                  Led inclusive cultural events and campus activities to help
+                  international students feel welcome and connected.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="text-primary">2023–2024: Buddy Coordinator</h4>
+                <p>
+                  Managed the buddy system, pairing local and international
+                  students to support integration and community building.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container mt-4">
+        <button
+          class="btn btn-color-1"
+          onclick="window.open('./assets/Certificate2023.pdf')"
+        >
+          2023
+        </button>
+        <button
+          class="btn btn-color-1"
+          onclick="window.open('./assets/Certificate2024.pdf')"
+        >
+          2024
+        </button>
+      </div>
+    </section>
 
 <section id="contact">
   <p class="section__text__p1">Get in Touch</p>
