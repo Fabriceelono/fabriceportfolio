@@ -1137,11 +1137,13 @@ article {
 }
 .document-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 2rem auto; /* centers the whole block */
   text-align: center;
+  max-width: 1100px; /* prevent it from stretching too far */
+  padding: 0 1rem; /* nice spacing on mobile */
 }
 
 .document-card {
@@ -1153,18 +1155,26 @@ article {
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .document-card:hover {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  background-color: #eef6ff;
+  box-shadow: 0 12px 28px rgba(36, 110, 185, 0.15);
 }
 
 .document-card img {
   width: 80px;
   height: auto;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.document-card:hover img {
+  transform: scale(1.05);
 }
 
 .document-card h4 {
@@ -1174,17 +1184,36 @@ article {
   text-transform: uppercase;
 }
 
-.document-card a {
+.document-card p {
   color: #555;
-  text-decoration: none;
   font-size: 0.95rem;
 }
 
-.document-card:hover {
-  transform: translateY(-5px);
-}
-
 @media screen and (max-width: 768px) {
+  .document-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .document-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.2rem;
+  }
+
+  .document-card img {
+    width: 70px;
+    margin-bottom: 0.8rem;
+  }
+
+  .document-card h4 {
+    font-size: 1rem;
+  }
+
+  .document-card p {
+    font-size: 0.9rem;
+  }
   .internship-container {
     flex-direction: column;
     align-items: center;
